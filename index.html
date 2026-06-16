@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Happy Birthday, Atish ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background -->
+  <canvas id="stars-canvas"></canvas>
+  <div id="particles"></div>
+  <div id="cursor-glow"></div>
+  <div class="progress-rail"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="burst-overlay" id="burstOverlay"></div>
+
+  <!-- Sound Toggle -->
+  <button id="soundToggle" aria-label="Toggle music" class="muted">
+    <svg id="soundIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15" class="mute-x1"></line>
+      <line x1="17" y1="9" x2="23" y2="15" class="mute-x2"></line>
+    </svg>
+  </button>
+
+  <main id="main">
+
+    <!-- =================== SECTION 1: OPENING =================== -->
+    <section id="opening" class="screen">
+      <div class="vignette"></div>
+      <div class="shooting-stars" id="shootingStars"></div>
+      <div class="open-content">
+        <p class="kicker fade-seq" style="animation-delay:.3s">A special message for</p>
+        <div class="big-title">
+          <span class="line fade-seq" style="animation-delay:.7s">Happy Birthday</span>
+          <span class="script fade-seq" style="animation-delay:1.2s">My Jaan ❤️</span>
+          <span class="name-reveal fade-seq" style="animation-delay:1.8s">ATISH</span>
+        </div>
+        <p class="quote fade-seq" style="animation-delay:2.5s">
+          "Some people make the world beautiful<br>simply by existing."
+        </p>
+        <button class="open-btn fade-seq" id="openBtn" style="animation-delay:3.1s">
+          Open Your Surprise
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        </button>
+      </div>
+      <p class="scroll-hint" id="scrollHint" style="opacity:0">scroll to explore ↓</p>
+    </section>
+
+    <!-- =================== SECTION 2: OUR STORY =================== -->
+    <section id="story" class="screen story-screen">
+      <div class="bg-photo zoom-slow" style="background-image: url('photo1.jpg');"></div>
+      <div class="scrim deep"></div>
+      <div class="content-block center" style="z-index:3;">
+        <p class="eyebrow reveal-up">Our Story</p>
+        <h2 class="serif-title big reveal-up">
+          Every love story is beautiful.<br>
+          <span class="accent">But somehow ours became my favourite.</span>
+        </h2>
+        <div class="section-divider reveal-up"></div>
+        <p class="photo-caption reveal-up">"My favourite place is wherever you are ❤️"</p>
+      </div>
+    </section>
+
+    <!-- =================== SECTION 3: LOVE LETTER =================== -->
+    <section id="letter" class="screen letter-screen">
+      <div class="content-block center">
+        <p class="eyebrow">A Letter From My Heart</p>
+        <div class="glass letter-card" id="letterCard">
+          <div class="floating-hearts" id="floatingHearts"></div>
+          <div class="letter-seal">💌</div>
+          <div id="letterLines">
+            <p class="letter-line script-line">My Jaan,</p>
+            <p class="letter-line gap">Every day with you feels like a blessing.</p>
+            <p class="letter-line">You light up my darkest moments.</p>
+            <p class="letter-line">You make ordinary days extraordinary.</p>
+            <p class="letter-line">You make me laugh when I need it most.</p>
+            <p class="letter-line gap">You make me feel loved in ways words cannot explain.</p>
+            <p class="letter-line gap">You are my comfort.</p>
+            <p class="letter-line">My peace.</p>
+            <p class="letter-line">My safe place.</p>
+            <p class="letter-line">My favourite notification.</p>
+            <p class="letter-line">My favourite person.</p>
+            <p class="letter-line gap">On your birthday, I just want to thank you for existing.</p>
+            <p class="letter-line">For loving me.</p>
+            <p class="letter-line">For choosing me.</p>
+            <p class="letter-line">For being you.</p>
+            <p class="letter-line gap script-line">Happy Birthday My Jaan.</p>
+            <p class="letter-line script-line">Happy Birthday My Love.</p>
+            <p class="letter-line script-line">Happy Birthday My ATISH.</p>
+            <p class="letter-line signature">Forever Yours ❤️</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== SECTION 4: WHY YOU ARE SPECIAL =================== -->
+    <section id="special" class="screen">
+      <div class="content-block center">
+        <p class="eyebrow reveal-up">The Man I Admire</p>
+        <h2 class="serif-title reveal-up">Why You Are <span class="accent">So Special</span></h2>
+        <div class="work-card glass reveal-up">
+          <img src="photo2.jpg" alt="Atish working" style="border-radius:20px 20px 0 0;">
+          <p class="photo-caption-inline">"The world sees your success. I see the effort behind it ❤️"</p>
+        </div>
+        <div class="special-list" id="specialList">
+          <div class="special-item">✨ Because you never give up, no matter how hard the path.</div>
+          <div class="special-item">💛 Because you care deeply about everyone you love.</div>
+          <div class="special-item">🌟 Because you work harder than anyone I know.</div>
+          <div class="special-item">🔥 Because you inspire me every single day.</div>
+          <div class="special-item">❤️ Because you love with your whole heart.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== SECTION 5: QUIZ =================== -->
+    <section id="quiz" class="screen">
+      <div class="content-block center" style="position:relative;">
+        <p class="eyebrow reveal-up">A Question For You</p>
+        <h2 class="serif-title reveal-up">Do you know how much<br><span class="accent">I love you?</span></h2>
+        <div class="quiz-options reveal-up" id="quizOptions">
+          <button class="quiz-btn" onclick="answerQuiz(this)">A lot</button>
+          <button class="quiz-btn" onclick="answerQuiz(this)">Very Much</button>
+          <button class="quiz-btn" onclick="answerQuiz(this)">Infinite</button>
+          <button class="quiz-btn" onclick="answerQuiz(this)">Beyond Infinity</button>
+        </div>
+        <p class="quiz-answer" id="quizAnswer">Still not enough to describe my love ❤️</p>
+        <div class="heart-explosion" id="heartExplosion"></div>
+      </div>
+    </section>
+
+    <!-- =================== SECTION 6: 100 REASONS =================== -->
+    <section id="reasons" class="screen" style="padding-top:80px; padding-bottom:80px; align-items:flex-start;">
+      <div class="content-block center" style="max-width:700px;">
+        <p class="eyebrow">Flipping with Love</p>
+        <h2 class="serif-title big">100 Reasons<br><span class="accent">I Love You</span></h2>
+        <p style="font-size:13px; color:rgba(255,255,255,.45); margin-bottom:4px; letter-spacing:1px;">Tap each card to reveal ✨</p>
+        <div class="reasons-grid" id="reasonsGrid"></div>
+        <p class="reasons-counter" id="reasonsCounter">0 / 100 revealed</p>
+      </div>
+    </section>
+
+    <!-- =================== SECTION 7: MARATHI =================== -->
+    <section id="marathi" class="screen marathi-screen">
+      <div class="petals" id="petalsContainer"></div>
+      <div class="content-block center" style="z-index:2;">
+        <p class="eyebrow reveal-up">मराठीत शुभेच्छा</p>
+        <div class="glass" style="padding:36px 24px; margin-top:8px;">
+          <div class="marathi-block reveal-up">
+            <p class="marathi-main">वाढदिवसाच्या हार्दिक शुभेच्छा माझ्या प्रिय ❤️</p>
+            <p class="marathi-sub reveal-up">तुझं आयुष्य आनंदाने, प्रेमाने आणि यशाने भरून जावो.</p>
+            <p class="marathi-sub reveal-up">तुझ्या प्रत्येक स्वप्नाला यश मिळो.</p>
+            <p class="marathi-sub reveal-up">तुझं हास्य कायम असंच खुलत राहो.</p>
+            <p class="marathi-sub reveal-up">तुझ्या आयुष्यात सुख, समृद्धी आणि भरपूर प्रेम नांदो.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== SECTION 8: MOUNTAIN / THE MAN I LOVE =================== -->
+    <section id="mountain" class="screen mountain-screen">
+      <div class="bg-photo" style="background-image: url('photo1.jpg'); background-position: center 30%;"></div>
+      <div class="scrim deep"></div>
+      <div class="content-block center" style="z-index:3;">
+        <p class="eyebrow reveal-up">Dreamer & Explorer</p>
+        <h2 class="serif-title big reveal-up">
+          You are my adventure.<br>
+          <span class="accent">You are my dream.</span><br>
+          You are my destination.
+        </h2>
+        <div class="section-divider reveal-up"></div>
+        <p class="photo-caption reveal-up">"No matter where life takes you, my heart will always walk beside you ❤️"</p>
+      </div>
+    </section>
+
+    <!-- =================== SECTION 9: MESSAGE WALL =================== -->
+    <section id="messages" class="screen" style="align-items:flex-start;">
+      <div class="content-block center">
+        <p class="eyebrow">From My Heart to Yours</p>
+        <h2 class="serif-title">25 Things I Want<br><span class="accent">You to Know</span></h2>
+        <div class="message-wall" id="messageWall"></div>
+      </div>
+    </section>
+
+    <!-- =================== SECTION 10: LOVE METER =================== -->
+    <section id="lovemeter" class="screen">
+      <div class="content-block center">
+        <p class="eyebrow reveal-up">Measuring the Unmeasurable</p>
+        <h2 class="serif-title big reveal-up">My Love For You</h2>
+        <div class="meter-wrap reveal-up">
+          <div class="meter-track">
+            <div class="meter-fill" id="meterFill"></div>
+          </div>
+          <p class="meter-percent" id="meterPercent">0%</p>
+          <p class="meter-result" id="meterResult">LOVE OVERFLOW DETECTED ❤️</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== SECTION 11: BIRTHDAY CAKE =================== -->
+    <section id="cake" class="screen">
+      <div class="fireworks-canvas-wrap"><canvas id="fireworksCanvas"></canvas></div>
+      <div class="confetti-wrap" id="confettiWrap"></div>
+      <div class="content-block center" style="z-index:10; position:relative;">
+        <p class="eyebrow reveal-up">Make A Wish</p>
+        <h2 class="serif-title reveal-up">Blow Out Your Candles</h2>
+        <div class="cake-wrap reveal-up" id="cakeWrap" onclick="blowCandles()">
+          <div class="cake">
+            <div class="candle-flames">
+              <span class="flame"></span>
+              <span class="flame"></span>
+              <span class="flame"></span>
+            </div>
+            <div class="candles">
+              <div class="candle"></div>
+              <div class="candle"></div>
+              <div class="candle"></div>
+            </div>
+            <div class="cake-top"></div>
+            <div class="cake-drip"></div>
+            <div class="cake-body"></div>
+            <div class="cake-board"></div>
+          </div>
+          <p class="cake-instruction">Tap to Make a Wish ✨</p>
+        </div>
+        <p class="cake-result reveal-up" id="cakeResult">May every wish in your heart come true ❤️</p>
+      </div>
+    </section>
+
+    <!-- =================== SECTION 12: FUTURE US =================== -->
+    <section id="future" class="screen">
+      <div class="content-block center">
+        <p class="eyebrow">A Message From Future Us</p>
+        <div class="future-sequence" id="futureSequence">
+          <p class="future-line">More birthdays.</p>
+          <p class="future-line">More adventures.</p>
+          <p class="future-line">More laughter.</p>
+          <p class="future-line">More memories.</p>
+          <p class="future-line">More dreams.</p>
+          <p class="future-line">More us.</p>
+          <p class="future-line forever">Forever.</p>
+        </div>
+        <div class="final-vow glass" id="finalVow" style="padding:28px 24px; width:100%;">
+          <p>I choose you today.</p>
+          <p>I choose you tomorrow.</p>
+          <p>I choose you forever.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== SECTION 13: FINALE =================== -->
+    <section id="finale" class="screen finale-screen">
+      <div class="bg-photo finale-photo" style="background-image: url('photo2.jpg');"></div>
+      <div class="scrim deep"></div>
+      <div class="forever-hearts" id="foreverHearts"></div>
+      <div class="content-block center finale-content">
+        <span class="finale-line finale-label" id="fl1">My Favourite Everything</span>
+        <span class="finale-line finale-big" id="fl2">My Favourite Face.</span>
+        <span class="finale-line finale-big" id="fl3">My Favourite Smile.</span>
+        <span class="finale-line finale-big" id="fl4">My Favourite Human.</span>
+        <span class="finale-name" id="finaleName">Atish ❤️</span>
+        <p class="finale-thanks" id="finaleThankYou">Thank you for existing.</p>
+        <p class="finale-thanks" id="finaleHappy" style="transition-delay:.3s;">Happy Birthday My Love.</p>
+        <p class="made-with" id="madeWith">Made With All My Love ❤️</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
